@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curelinx | Medical Device Trading</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    html {
+      /* height of your sticky navbar */
+      scroll-behavior: smooth;
+    }
+
+    .jumbotron {
+      background: linear-gradient(to left, rgba(0, 100, 0, 0.85), rgba(218, 165, 32, 0.5)),
+        url('images/palm_tree.png') no-repeat right center;
+      background-size: contain;
+      background-color: #004400;
+      /* fallback */
+      color: white;
+      padding: 100px 30px;
+    }
+
+    @media (max-width: 768px) {
+      .jumbotron {
+        background-image: none !important;
+      }
+    }
+
+    .jumbotron {
+      height: 100vh;
+      min-height: 400px;
+    }
+
+    .jumbotron-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .jumbotron-video::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent 85%, rgba(0, 0, 0, 0.2));
+      z-index: 2;
+    }
+
+
+    .jumbotron-overlay {
+      position: relative;
+      z-index: 2;
+      background: rgba(0, 100, 0, 0.6);
+      /* Optional green tint */
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+
+
+    .gold {
+      color: #DAA520;
+    }
+
+    .bg-green {
+      background-color: #006400;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 40px 0;
+      border-top: 1px solid #daa5208a;
+    }
+
+    .footer a {
+      color: #006400;
+      text-decoration: none;
+    }
+
+    .scroll-top {
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin: 20px auto 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      background-color: #DAA520;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .navbar-toggler {
+      border-color: #ffffff;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-green sticky-top transition" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand gold" href="/">Curelinx</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#offerings">Offerings</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how">How it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Talk to Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="jumbotron-offerings text-white text-center d-flex align-items-center"
+    style="height: 70vh; background: linear-gradient(to left, rgba(0, 100, 0, 0.85), rgba(218, 165, 32, 0.5)), url('images/offerings-bg.jpg') no-repeat center center; background-size: cover;">
+    <video autoplay muted loop playsinline class="jumbotron-video">
+      <source src="/video/3197634-sd_640_360_25fps.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="jumbotron-overlay">
+      <div class="container text-center text-white">
+        <h1 class="display-4" style="font-weight: bold;">Trusted Trading Partner in Medical Devices</h1>
+        <p class="lead">Bridging the Indian supply ecosystem to serve the GCC healthcare market with the best
+          pricing and quality.</p>
+        <a href="#contact" class="btn btn-lg btn-warning text-dark fw-bold mt-5">Get in Touch</a>
+      </div>
+    </div>
+    <!-- <div class="jumbotron-overlay">
+            <div class="container text-center text-white">
+                <h1 class="display-4 fw-bold gold">Our Medical Offerings</h1>
+                <p class="lead">We provide a comprehensive range of certified medical devices and consumables tailored for hospitals, clinics, and care centers. Sourced from trusted suppliers, delivered with reliability and precision.</p>
+            </div>
+        </div> -->
+
+    <!-- <div class="container">
+    <h1 class="display-4 fw-bold gold">Our Medical Offerings</h1>
+    <p class="lead">We provide a comprehensive range of certified medical devices and consumables tailored for hospitals, clinics, and care centers. Sourced from trusted suppliers, delivered with reliability and precision.</p>
+  </div> -->
+  </section>
+
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Injection & Infusion Devices</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Syringes (2-part, 3-part, Luer Slip, Luer Lock, Safety, Insulin, Tuberculin)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Needles (Hypodermic, Safety, Spinal, Epidural)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">IV Cannulas (Standard, Winged, Safety)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Infusion Sets (Gravity, Burette, Vented/Non-Vented)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Blood Transfusion Sets (Filtered, Measured Volume)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Scalp Vein Sets (Butterfly Cannulas)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="mt-4 text-center text-muted"><em>These devices facilitate precise delivery of medications and fluids,
+        essential for various medical treatments.</em></p>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Respiratory & Airway Management</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Oxygen Delivery (Nasal Cannula, Oxygen Mask, Non-Rebreather Mask)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Suction Devices (Suction Catheters, Yankauer Tip)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Airway Devices (OPA, NPA, Endotracheal Tubes)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Nebulization (Mask with Chamber, Jet Set)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="mt-4 text-center text-muted"><em>These devices are critical for maintaining oxygenation, ventilation, and
+        clear airways, ensuring patient respiratory health.</em></p>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Urology & Drainage Devices</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Urine Collection (Leg & Bed Type, Pediatric Bags)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Catheters (Nelaton, Foley, Suprapubic)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Drainage Systems (Ryle’s Tube, Closed Wound, Thoracic Set)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="mt-4 text-center text-muted"><em>These devices manage fluid discharge and facilitate urine drainage, vital
+        for patient comfort and recovery.</em></p>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Surgical & Procedural Consumables</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Gloves (Surgical, Examination, Vinyl)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Drapes & Gowns (Surgical Drapes, Isolation, PPE)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Face Masks (3-Ply, N95, Face Shields)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Caps & Shoe Covers (Surgeon, Bouffant, Non-skid)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Cotton & Gauze (Gauze Pads, Cotton Rolls, Sponges)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Sutures (Absorbable & Non-absorbable)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="mt-4 text-center text-muted"><em>These consumables ensure sterility and hygiene, fundamental in surgical
+        and clinical procedures.</em></p>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Wound Care & Dressing Materials</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Adhesive Dressings (Band-Aids, Surgical Plasters)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Advanced Dressings (Hydrocolloid, Hydrogel, Foam)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Non-Adhesive Dressings (Paraffin Gauze, Tulle)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Bandages & Tapes (Crepe, Elastic, Micropore, Silk)</h6>
+            <p class="card-text text-muted">Representative image or icon here.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="mt-4 text-center text-muted"><em>These materials are essential for dressing, healing, and protecting
+        wounds, ensuring proper wound management.</em></p>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>About Curelinx</h5>
+          <p>Trusted sourcing and trading partner specializing in Indian medical devices for the GCC market.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h5>Policies</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Cookies Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Contact</h5>
+          <ul class="list-unstyled">
+            <li>Email: info@curelinx.com</li>
+            <li>Phone: +91-xxxxxxxxxx</li>
+            <li>Address: Burhanput, Madhya Pradesh, India</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Partners</h5>
+          <p>We work with verified Indian suppliers and global logistics networks.</p>
+        </div>
+      </div>
+      <div class="text-center mt-4">&copy; 2025 Curelinx. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919370694707" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Collapse mobile menu on nav link click
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const toggler = document.querySelector('.navbar-toggler');
+        const menu = document.getElementById('navbarNav');
+        if (toggler.offsetParent !== null && menu.classList.contains('show')) {
+          toggler.click();
+        }
+      });
+    });
+  </script>
+  <script>
+    // Offset scroll for anchor links
+    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          const yOffset = -80; // adjust to match your sticky navbar height
+          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

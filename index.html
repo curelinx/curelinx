@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curelinx | Medical Device Trading</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Style in-page links */
+        .nav-link[href^="#"] {
+            color: #FFD700;
+            font-weight: 600;
+        }
+
+        /* Style other-page links */
+        .nav-link[href^="/"],
+        .nav-link[href$=".html"] {
+            color: #FFFFFF;
+            font-weight: 400;
+        }
+
+
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        html {
+            /* height of your sticky navbar */
+            scroll-behavior: smooth;
+        }
+
+        .jumbotron {
+            background: linear-gradient(to left, rgba(0, 100, 0, 0.85), rgba(218, 165, 32, 0.5)),
+                url('images/palm_tree.png') no-repeat right center;
+            background-size: contain;
+            background-color: #004400;
+            /* fallback */
+            color: white;
+            padding: 100px 30px;
+        }
+
+        @media (max-width: 768px) {
+            .jumbotron {
+                background-image: none !important;
+            }
+        }
+
+        .jumbotron {
+            height: 100vh;
+            min-height: 400px;
+        }
+
+        .jumbotron-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .jumbotron-video::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent 85%, rgba(0, 0, 0, 0.2));
+            z-index: 2;
+        }
+
+
+        .jumbotron-overlay {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 100, 0, 0.6);
+            /* Optional green tint */
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+
+
+        .gold {
+            color: #DAA520;
+        }
+
+        .bg-green {
+            background-color: #006400;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            border-top: 1px solid #daa5208a;
+        }
+
+        .footer a {
+            color: #006400;
+            text-decoration: none;
+        }
+
+        .scroll-top {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 20px auto 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            background-color: #DAA520;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .navbar-toggler {
+            border-color: #ffffff;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green sticky-top transition" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand gold" href="/">Curelinx</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#offerings">Offerings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how">How it Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Talk to Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact Us</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="/ar.html" lang="ar">العربية</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <section class="jumbotron position-relative overflow-hidden">
+        <video autoplay muted loop playsinline class="jumbotron-video">
+            <source src="/video/3197634-sd_640_360_25fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <div class="jumbotron-overlay">
+            <div class="container text-center text-white">
+                <h1 class="display-4" style="font-weight: bold;">Trusted Trading Partner in Medical Devices</h1>
+                <p class="lead">Bridging the Indian supply ecosystem to serve the GCC healthcare market with the best
+                    pricing and quality.</p>
+                <a href="#contact" class="btn btn-lg btn-warning text-dark fw-bold mt-5">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+    <!-- Offerings -->
+    <section class="my-5" id="offerings">
+        <div class="container py-5" data-aos="fade-up">
+            <h2 class="text-center mb-4 gold">Our Offerings</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h4>Medical Devices</h4>
+                    <p>We offer a curated range of certified medical devices sourced from India's top suppliers.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Transparent Pricing</h4>
+                    <p>No middlemen. Direct sourcing ensures competitive and clear pricing for GCC buyers.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Regulatory Compliance</h4>
+                    <p>We ensure every product complies with Indian and GCC health authority norms.</p>
+                </div>
+            </div>
+            <div class="container text-center text-white">
+                <a href="/offering_CL.html" class="btn btn-lg btn-warning text-dark fw-bold mt-5">Check Complete
+                    Offerings</a>
+            </div>
+            <!-- up arrow to Top -->
+            <div class="mt-5 text-center ">
+                <a href="#top" class="scroll-top" aria-label="Scroll to Top">
+                    <svg height="40" width="40" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="256" cy="256" r="248" fill="#daa520" />
+                        <polygon
+                            points="95.936,297.344 256,133.984 416.064,297.344 366.096,346.144 256,233.792 145.904,346.144"
+                            fill="#ffffff" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- How it Works -->
+    <section class="my-5" id="how" >
+        <div class="container bg-light py-5" data-aos="fade-up">
+            <h2 class="text-center mb-4 gold">How It Works</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>We identify and partner with Indian medical suppliers who offer high-quality products at scale.
+                        Once an order is placed from a GCC customer, we handle sourcing, logistics, and final delivery
+                        with full transparency and documentation.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>Select products from our catalog</li>
+                        <li>We procure directly from Indian manufacturers</li>
+                        <li>Handle shipping, documentation, and customs</li>
+                        <li>Deliver at best price to your door in GCC</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- up arrow to Top -->
+            <div class="mt-5 text-center ">
+                <a href="#top" class="scroll-top" aria-label="Scroll to Top">
+                    <svg height="40" width="40" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="256" cy="256" r="248" fill="#daa520" />
+                        <polygon
+                            points="95.936,297.344 256,133.984 416.064,297.344 366.096,346.144 256,233.792 145.904,346.144"
+                            fill="#ffffff" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="my-5" id="contact" >
+        <div class="container py-5" data-aos="fade-up">
+            <h2 class="text-center mb-4 gold">Talk to Us</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Let's Connect</h5>
+                            <p class="card-text">Reach out to us to discuss your medical device needs, partnerships, or
+                                procurement queries. Our expert team is here to help you find the right solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <!-- up arrow to Top -->
+            <div class="mt-5 text-center ">
+                <a href="#top" class="scroll-top" aria-label="Scroll to Top">
+                    <svg height="40" width="40" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="256" cy="256" r="248" fill="#daa520" />
+                        <polygon
+                            points="95.936,297.344 256,133.984 416.064,297.344 366.096,346.144 256,233.792 145.904,346.144"
+                            fill="#ffffff" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About Curelinx</h5>
+                    <p>Trusted sourcing and trading partner specializing in Indian medical devices for the GCC market.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Policies</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: info@curelinxhealthcare.com</li>
+                        <li>Phone: +917000275910</li>
+                        <li>Address: Burhanpur, Madhya Pradesh, India</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Partners</h5>
+                    <p>We work with verified Indian suppliers and global logistics networks.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">&copy; 2025 Curelinx. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/917000275910" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Collapse mobile menu on nav link click
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const toggler = document.querySelector('.navbar-toggler');
+                const menu = document.getElementById('navbarNav');
+                if (toggler.offsetParent !== null && menu.classList.contains('show')) {
+                    toggler.click();
+                }
+            });
+        });
+    </script>
+    <script>
+        // Offset scroll for anchor links
+        document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const yOffset = -80; // adjust to match your sticky navbar height
+                    const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

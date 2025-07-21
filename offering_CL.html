@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curelinx | Medical Device Trading</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Style in-page links */
+        .nav-link[href^="#"] {
+            color: #FFD700;
+            font-weight: 600;
+        }
+
+        /* Style other-page links */
+        .nav-link[href^="/"],
+        .nav-link[href$=".html"] {
+            color: #FFFFFF;
+            font-weight: 400;
+        }
+
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        html {
+            /* height of your sticky navbar */
+            scroll-behavior: smooth;
+        }
+
+        /* navbar */
+        /* instance expanse and collapsing */
+        .navbar-collapse.collapsing {
+            height: auto !important;
+            transition: none !important;
+        }
+
+        /* Force navbar to always collapse */
+        .navbar-collapse {
+            display: none;
+        }
+
+        .navbar-collapse.show {
+            display: flex !important;
+            flex-direction: column;
+        }
+
+
+        .jumbotron {
+            height: 70vh;
+            min-height: 400px;
+            position: relative;
+        }
+
+        .jumbotron-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+            z-index: 1;
+            display: block;
+        }
+
+
+        @media (max-width: 768px) {
+            .jumbotron-img {
+                object-position: center top;
+            }
+        }
+
+        .jumbotron-overlay {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: radial-gradient(rgba(0, 64, 0, 0.8) 30%,
+                    rgba(0, 64, 0, 0.3) 60%,
+                    rgba(0, 64, 0, 0.1) 100%);
+        }
+
+
+
+        .jumbotron-overlay .content-wrapper {
+            max-width: 900px;
+        }
+
+        .gold {
+            color: #DAA520;
+        }
+
+        .nav-tabs .nav-link {
+            white-space: nowrap;
+        }
+
+        .bg-green {
+            background-color: #006400;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            border-top: 1px solid #daa5208a;
+        }
+
+        .footer a {
+            color: #006400;
+            text-decoration: none;
+        }
+
+        .scroll-top {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 20px auto 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            background-color: #DAA520;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .navbar-toggler {
+            border-color: #ffffff;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-green shadow-sm sticky-top transition " style="z-index: 1020;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold gold" href="/">Curelinx</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#injection">Injection & Infusion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#respiratory">Respiratory & Airway</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#urology">Urology & Drainage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#surgical">Surgical Consumables</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#wound">Wound Care</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <section class="jumbotron position-relative overflow-hidden">
+        <img class="jumbotron-img" src="/images/offerings_background.png" alt="Offerings Background">
+        <div class="jumbotron-overlay text-white text-center">
+            <div class="content-wrapper">
+                <h1 class="display-4 fw-bold ">Our Medical Offerings</h1>
+                <p class="lead">We provide a comprehensive range of certified medical devices and consumables tailored
+                    for hospitals, clinics, and care centers. Sourced from trusted suppliers, delivered with reliability
+                    and precision.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4 text-dark">These devices facilitate precise delivery of medications and fluids,
+            essential for various medical treatments.
+    </section>
+
+    <section class="my-5 justify-content-center mx-auto" id="injection">
+        <div  class="container py-3 text-center justify-content-center mx-auto ">
+            <h2 class="text-center mb-3 gold">Injection & Infusion Devices</h2>
+            <p <small class="text-muted h5 mb-5">These devices facilitate precise delivery of medications and fluids,
+                essential for various medical treatments.</small></p>
+
+            <div
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 text-center justify-content-center mx-auto">
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/syringe.png" class="card-img-top mx-auto d-block mt-3" alt="Syringe Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Syringes</span><br> (2-part, 3-part, Luer Slip,
+                                Luer Lock, Safety, Insulin,
+                                Tuberculin)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/needle.png" class="card-img-top mx-auto d-block mt-3" alt="Syringe Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Needles</span><br> (Hypodermic, Safety, Spinal,
+                                Epidural)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/IV.jpg" class="card-img-top mx-auto d-block mt-3" alt="Syringe Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">IV Cannulas</span><br> (Standard, Winged,
+                                Safety)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Infusion.png" class="card-img-top mx-auto d-block mt-3" alt="Syringe Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Infusion Sets</span><br> (Gravity, Burette,
+                                Vented/Non-Vented)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Blood.png" class="card-img-top mx-auto d-block mt-3" alt="Syringe Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Blood Transfusion Sets</span><br> (Filtered,
+                                Measured Volume)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Scalp.png" class="card-img-top mx-auto d-block mt-3" alt="Syringe Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Scalp Vein Sets</span><br> (Butterfly Cannulas)
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="my-5 justify-content-center mx-auto">
+        <div id="respiratory" class="container py-3 text-center justify-content-center mx-auto ">
+            <h2 class="text-center mb-4 gold">Respiratory & Airway Management</h2>
+            <p <small class="text-muted h5 mb-5">These devices are critical for maintaining oxygenation, ventilation,
+                and clear airways, ensuring patient respiratory health.</small></p>
+            <div
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 text-center justify-content-center mx-auto">
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Oxygen.png" class="card-img-top mx-auto d-block mt-3" alt="Oxygen Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Oxygen Delivery</span><br>(Nasal Cannula,
+                                Oxygen Mask, Non-Rebreather Mask)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Suction.png" class="card-img-top mx-auto d-block mt-3" alt="Suction Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Suction Devices</span><br>(Suction Catheters,
+                                ankauer Tip)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Airway.png" class="card-img-top mx-auto d-block mt-3" alt="Airway Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Airway Devices</span><br>(OPA, NPA,
+                                Endotracheal Tubes)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Nebulization.png" class="card-img-top mx-auto d-block mt-3"
+                            alt="Nebulization Image" style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Nebulization</span><br>(Mask with Chamber, Jet
+                                Set)</h6>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="my-5 justify-content-center mx-auto">
+
+        <div id="urology" class="container py-3 text-center justify-content-center mx-auto ">
+            <h2 class="text-center mb-4 gold">Urology & Drainage Devices</h2>
+            <p <small class="text-muted h5 mb-5">These devices manage fluid discharge and facilitate urine drainage,
+                vital for patient comfort and recovery.</small></p>
+            <div
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 text-center justify-content-center mx-auto">
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Urine.png" class="card-img-top mx-auto d-block mt-3" alt="Urine Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Urine Collection</span><br>(Leg & Bed Type,
+                                Pediatric Bags)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Catheters.png" class="card-img-top mx-auto d-block mt-3" alt="Catheters Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Catheters</span><br>(Nelaton, Foley,
+                                Suprapubic)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Drainage.png" class="card-img-top mx-auto d-block mt-3" alt="Drainage Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Drainage Systems</span><br>(Ryle’s Tube, Closed
+                                Wound, Thoracic Set)</h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="my-5 justify-content-center mx-auto">
+
+        <div id="surgical" class="container py-3 text-center justify-content-center mx-auto ">
+            <h2 class="text-center mb-4 gold">Surgical & Procedural Consumables</h2>
+            <p <small class="text-muted h5 mb-5">These consumables ensure sterility and hygiene, fundamental in
+                surgical and clinical procedures.</small></p>
+            <div
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 text-center justify-content-center mx-auto">
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Gloves.png" class="card-img-top mx-auto d-block mt-3" alt="Gloves Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Gloves</span><br>(Surgical, Examination, Vinyl)
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Drapes.png" class="card-img-top mx-auto d-block mt-3" alt="Drapes Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Drapes & Gowns</span><br>(Surgical Drapes,
+                                Isolation, PPE)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Face.png" class="card-img-top mx-auto d-block mt-3" alt="Face Masks Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Face Masks</span><br>(3-Ply, N95, Face Shields)
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Caps.png" class="card-img-top mx-auto d-block mt-3" alt="Caps Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Caps & Shoe Covers</span><br>(Surgeon,
+                                Bouffant, Non-skid)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Cotton.png" class="card-img-top mx-auto d-block mt-3" alt="Cotton Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Cotton & Gauze</span><br>(Gauze Pads, Cotton
+                                Rolls, Sponges)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Sutures.png" class="card-img-top mx-auto d-block mt-3" alt="Sutures Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Sutures</span><br>(Absorbable & Non-absorbable)
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="my-5 justify-content-center mx-auto">
+
+        <div id="wound" class="container py-3 text-center justify-content-center mx-auto ">
+            <h2 class="text-center mb-4 gold">Wound Care & Dressing Materials</h2>
+            <p <small class="text-muted h5 mb-5">These materials are essential for dressing, healing, and protecting
+                wounds, ensuring proper wound management.</small></p>
+            <div
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 text-center justify-content-center mx-auto">
+
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Adhesive.png" class="card-img-top mx-auto d-block mt-3" alt="Adhesive Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Adhesive Dressings</span><br>(Band-Aids,
+                                Surgical Plasters)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Advanced.png" class="card-img-top mx-auto d-block mt-3" alt="Advanced Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Advanced Dressings</span><br>(Hydrocolloid,
+                                Hydrogel, Foam)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Non-Adhesive.png" class="card-img-top mx-auto d-block mt-3"
+                            alt="Non-Adhesive Image" style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Non-Adhesive Dressings</span><br>(Paraffin
+                                Gauze, Tulle)</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/images/Bandages.png" class="card-img-top mx-auto d-block mt-3" alt="Bandages Image"
+                            style="width:100px; height:100px;">
+                        <div class="card-body">
+                            <h6 class="card-title"><span class="fw-bold">Bandages & Tapes</span><br>(Crepe, Elastic,
+                                Micropore, Silk)</h6>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> <!-- row -->
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Contact -->
+    <section class="my-5">
+        <div class="container py-5" id="contact" data-aos="fade-up">
+            <h2 class="text-center mb-4 gold">Talk to Us</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Let's Connect</h5>
+                            <p class="card-text">Reach out to us to discuss your medical device needs, partnerships, or
+                                procurement queries. Our expert team is here to help you find the right solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <!-- up arrow to Top -->
+            <div class="mt-5 text-center ">
+                <a href="#top" class="scroll-top" aria-label="Scroll to Top">
+                    <svg height="40" width="40" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="256" cy="256" r="248" fill="#daa520" />
+                        <polygon
+                            points="95.936,297.344 256,133.984 416.064,297.344 366.096,346.144 256,233.792 145.904,346.144"
+                            fill="#ffffff" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About Curelinx</h5>
+                    <p>Trusted sourcing and trading partner specializing in Indian medical devices for the GCC market.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Policies</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: info@curelinxhealthcare.com</li>
+                        <li>Phone: +917000275910</li>
+                        <li>Address: Burhanpur, Madhya Pradesh, India</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Partners</h5>
+                    <p>We work with verified Indian suppliers and global logistics networks.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">&copy; 2025 Curelinx. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/917000275910" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        const sectionIds = ["injection", "respiratory", "urology", "surgical", "wound"];
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+        // ScrollSpy-like behavior
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY - 60;
+            let activeFound = false;
+
+            sectionIds.forEach((id, index) => {
+                const section = document.getElementById(id);
+                if (
+                    section.offsetTop <= scrollPos &&
+                    section.offsetTop + section.offsetHeight > scrollPos
+                ) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    navLinks[index].classList.add('active');
+                    activeFound = true;
+                }
+            });
+
+            if (!activeFound) {
+                navLinks.forEach(link => link.classList.remove('active'));
+            }
+        });
+
+        // Smooth scroll + collapse on click
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const yOffset = -90;
+                    const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+
+                    // Collapse navbar (if open)
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        const toggler = document.querySelector('.navbar-toggler');
+                        toggler.click();
+                    }
+                }
+            });
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
